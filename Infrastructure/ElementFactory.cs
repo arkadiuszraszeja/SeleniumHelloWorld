@@ -6,10 +6,10 @@ namespace NUnitTestProject1.Infrastructure
 {
     public class ElementFactory
     {
-        public ElementFactory(IWebDriver webDriver)
+        public ElementFactory(IWebDriver webDriver, WebDriverWait wait)
         {
             _webDriver = webDriver;
-            _wait = new WebDriverWait(webDriver, new TimeSpan(0, 0, 30));
+            _wait = wait;
         }
 
         IWebDriver _webDriver;

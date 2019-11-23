@@ -31,6 +31,7 @@ namespace NUnitTestProject1.Infrastructure
 
         public void Click()
         {
+            Wait();
             _webElement.Click();
         }
 
@@ -74,6 +75,12 @@ namespace NUnitTestProject1.Infrastructure
         {
             Wait();
             _webElement.Submit();
+        }
+
+        public bool Exists()
+        {
+            Wait();
+            return this.Displayed;
         }
 
         private void Wait()
